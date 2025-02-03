@@ -7,8 +7,8 @@
     <cargoProject FILE="$PROJECT_DIR$/Cargo.toml" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="67e3d986-ff20-4100-b874-e564e9bc4eb3" name="Changes" comment="Completed: Homework">
-      <change beforePath="$PROJECT_DIR$" beforeDir="false" />
+    <list default="true" id="67e3d986-ff20-4100-b874-e564e9bc4eb3" name="Changes" comment="Completed: Project">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,7 +17,7 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="RsBuildProfile:dev" />
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MacroExpansionManager">
     <option name="directoryName" value="he7I4rsN" />
@@ -32,6 +32,7 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;Cargo.Run.executor&quot;: &quot;Run&quot;,
     &quot;Cargo.Test Operators.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
@@ -54,22 +55,24 @@
       <window_info id="Bookmarks" side_tool="true" />
       <window_info id="Merge Requests" />
       <window_info id="Commit_Guest" show_stripe_button="false" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.32975262" />
-      <window_info id="Commit" order="1" weight="0.32975262" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19628906" />
+      <window_info id="Commit" order="1" weight="0.19628906" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
-      <window_info id="Pull Requests" order="2" weight="0.32975262" />
+      <window_info id="Pull Requests" order="3" weight="0.32975262" />
       <window_info anchor="bottom" id="Database Changes" />
       <window_info anchor="bottom" id="TypeScript" />
       <window_info anchor="bottom" id="Messages" />
       <window_info anchor="bottom" id="File Transfer" />
+      <window_info anchor="bottom" id="Find" />
       <window_info anchor="bottom" id="Version Control" order="0" weight="0.3302696" />
       <window_info anchor="bottom" id="Problems" order="1" />
-      <window_info anchor="bottom" id="Problems View" order="2" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="3" visible="true" weight="0.3302696" />
-      <window_info anchor="bottom" id="Build" order="4" weight="0.41237745" />
-      <window_info anchor="bottom" id="Run" order="5" weight="0.41237745" />
+      <window_info anchor="bottom" id="Problems View" order="2" weight="0.20404412" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="3" visible="true" weight="0.34252453" />
+      <window_info anchor="bottom" id="Build" order="4" weight="0.32536763" />
+      <window_info anchor="bottom" id="Run" order="5" weight="0.34252453" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3302696" />
-      <window_info anchor="bottom" id="Services" order="6" />
+      <window_info anchor="bottom" id="Debug" order="7" weight="0.4552696" />
+      <window_info anchor="bottom" id="Services" order="8" />
       <window_info anchor="right" id="Coverage" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Notifications" order="0" weight="0.25" />
       <window_info anchor="right" id="AIAssistant" order="1" weight="0.25" />
@@ -80,12 +83,14 @@
       <window_info anchor="right" id="RustCargo" order="6" weight="0.2" />
     </layout>
   </component>
-  <component name="RunManager" selected="Cargo.Test Operators">
+  <component name="RunManager" selected="Cargo.Run">
     <configuration name="Run" type="CargoCommandRunConfiguration" factoryName="Cargo Command" nameIsGenerated="true">
       <option name="buildProfileId" value="dev" />
       <option name="command" value="run" />
       <option name="workingDirectory" value="file://$PROJECT_DIR$" />
-      <envs />
+      <envs>
+        <env name="RUST_BACKTRACE" value="1" />
+      </envs>
       <option name="emulateTerminal" value="true" />
       <option name="channel" value="DEFAULT" />
       <option name="requiredFeatures" value="true" />
@@ -100,7 +105,7 @@
       </method>
     </configuration>
     <configuration name="Test Operators" type="CargoCommandRunConfiguration" factoryName="Cargo Command">
-      <option name="buildProfileId" value="test" />
+      <option name="buildProfileId" value="dev" />
       <option name="command" value="test --bin learning-lm-rust" />
       <option name="workingDirectory" value="file://$PROJECT_DIR$" />
       <envs />
@@ -136,7 +141,9 @@
       <workItem from="1736542753822" duration="135000" />
       <workItem from="1736542888272" duration="16000" />
       <workItem from="1736542911760" duration="12695000" />
-      <workItem from="1736557689808" duration="6224000" />
+      <workItem from="1736557689808" duration="7666000" />
+      <workItem from="1737978637077" duration="67344000" />
+      <workItem from="1738482664492" duration="24154000" />
     </task>
     <task id="LOCAL-00001" summary="Completed: Homework">
       <option name="closed" value="true" />
@@ -146,7 +153,15 @@
       <option name="project" value="LOCAL" />
       <updated>1736562949186</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Completed: Project">
+      <option name="closed" value="true" />
+      <created>1738565316652</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1738565316652</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -165,7 +180,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Completed: Homework" />
-    <option name="LAST_COMMIT_MESSAGE" value="Completed: Homework" />
+    <MESSAGE value="Completed: Project" />
+    <option name="LAST_COMMIT_MESSAGE" value="Completed: Project" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

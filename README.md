@@ -150,6 +150,7 @@ V = cat(V_cache, V)
 score = Q @ K.T / sqrt(dim)
 attn = softmax(score)
 attn_V = attn @ V
+---
 out = attn_V @ O_weight.T
 residual = out + residual
 ```

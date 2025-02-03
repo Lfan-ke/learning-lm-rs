@@ -78,8 +78,7 @@ pub fn rms_norm(y: &mut Tensor<f32>, x: &Tensor<f32>, w: &Tensor<f32>, epsilon: 
     let seq_len = y.shape()[ndim - 2];  // xi yi
     let total_seq_len = y.shape()[ndim - 1]; // n
     let batch = y.size() / (seq_len * total_seq_len);
-    assert!(y.shape() == x.shape());
-    assert!(w.shape()[w.shape().len()-1] == total_seq_len);
+    assert_eq!(w.shape()[w.shape().len() - 1], total_seq_len);
     let (_x, _y, _w) = (x.data(), unsafe { y.data_mut() }, w.data());
     for b in 0..batch {
         let base = b * seq_len * total_seq_len;
@@ -121,6 +120,8 @@ pub fn swiglu(y: &mut Tensor<f32>, x: &Tensor<f32>) {
 // C = beta * C + alpha * A @ B^T
 // hint: You don't need to do an explicit transpose of B
 pub fn matmul_transb(c: &mut Tensor<f32>, beta: f32, a: &Tensor<f32>, b: &Tensor<f32>, alpha: f32) {
+    /// 默认第二个向量制动专职，即：b，是b.T！
+    /// `A` 形状为 `m×k`，`B` 形状为 `n×k`，`C` 形状为 `m×n`
     // todo!("实现 matmul_transb，计算前做一些必要的检查会帮助你后续调试");
     // 目前偷个小懒，暂不实现广播
     let c_size = c.size().clone();
@@ -149,7 +150,7 @@ pub fn matmul_transb(c: &mut Tensor<f32>, beta: f32, a: &Tensor<f32>, b: &Tensor
             for ni in 0..n {
                 let base = bh * m * n;
                 _c[base + mi * n + ni] *= beta;
-                _c[base + mi * n + ni] += alpha * (0..k).map(|ki| clip_a(bh , mi, ki) * clip_b(bh, ni, ki)).sum::<f32>();
+                _c[base + mi * n + ni] += alpha * (0..k).map(|ki| clip_a(bh, mi, ki) * clip_b(bh, ni, ki)).sum::<f32>();
             }
         }
     }

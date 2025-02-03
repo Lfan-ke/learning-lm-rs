@@ -16,7 +16,7 @@ fn main() {
     let input = "Once upon a time";
     let binding = tokenizer.encode(input, true).unwrap();
     let input_ids = binding.get_ids();
-    print!("\n{}", input);
+    print!("\n{}\n", input);
     let output_ids = llama.generate(
         input_ids,
         500,
@@ -24,5 +24,6 @@ fn main() {
         30,
         1.,
     );
-    println!("{}", tokenizer.decode(&output_ids, true).unwrap());
+    // println!("{}", tokenizer.decode(&output_ids, true).unwrap());  // 为了方便调试改为了边推理边输出
+    println!();
 }
